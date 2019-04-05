@@ -122,6 +122,11 @@
       "sourceRoot": "projects/accordion/src",
       "projectType": "library",
       "prefix": "finra",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

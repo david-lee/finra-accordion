@@ -1,0 +1,37 @@
+.panel {
+  background-color: #fff;
+
+  .header {
+    padding: 10px;
+    border-bottom: 1px solid #aaa;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+
+  .content {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    overflow: auto;
+    height: 150px;
+
+    ::ng-deep > div:not(:last-child) {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}

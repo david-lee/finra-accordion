@@ -1,0 +1,21 @@
+<div class="panel">
+  <div
+    [attr.id]="id"
+    class="header"
+    (click)="toggle.emit()"
+    [attr.aria-expanded]="expanded"
+    [attr.aria-controls]="id + '-content'"
+  >
+    {{ headerTitle }}
+  </div>
+
+  <div
+    [attr.id]="id + '-content'"
+    class="content"
+    [ngClass]="{ hidden: !expanded }"
+    [attr.aria-hidden]="!expanded"
+    [attr.aria-labelledby]="id"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>
